@@ -1,0 +1,60 @@
+import net.tlalka.config.Config
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion Config.Android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion Config.Android.minSdkVersion
+        targetSdkVersion Config.Android.targetSdkVersion
+
+        applicationId 'net.tlalka.github.search'
+        versionCode 1
+        versionName '1.0.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    sourceSets.all { sourceSet ->
+        sourceSet.java.srcDirs += "src/${sourceSet.getName()}/kotlin"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation Config.Libs.kotlinStdlib
+    implementation Config.Libs.androidAppCompat
+    implementation Config.Libs.androidCoreKtx
+    implementation Config.Libs.androidConstraintLayout
+    implementation Config.Libs.androidDynamicAnimation
+    implementation Config.Libs.androidLifecycleViewModel
+    implementation Config.Libs.androidLifecycleExtension
+    implementation Config.Libs.androidNavigationUi
+    implementation Config.Libs.androidNavigationFragment
+    implementation Config.Libs.androidMaterialDesign
+
+    testImplementation Config.Libs.junit
+    testImplementation Config.Libs.junitExt
+    testImplementation Config.Libs.mockito
+
+    androidTestImplementation Config.Libs.junitExt
+    androidTestImplementation Config.Libs.espressoCore
+}

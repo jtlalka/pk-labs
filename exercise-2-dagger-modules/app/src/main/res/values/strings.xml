@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lib Search</string>
+
+    <string name="project_list_item_size_in_kb">%d KB</string>
+    <string name="project_list_item_size_in_mb">%d MB</string>
+    <string name="project_card_rate_this_library">Rate this Library</string>
+</resources>

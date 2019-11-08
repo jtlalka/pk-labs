@@ -1,0 +1,21 @@
+import net.tlalka.config.Config
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath Config.Build.androidPlugin
+        classpath Config.Build.kotlinPlugin
+        classpath Config.Build.navArgsPlugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
