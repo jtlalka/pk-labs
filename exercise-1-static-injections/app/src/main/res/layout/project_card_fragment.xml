@@ -34,7 +34,7 @@
         android:id="@+id/project_card_project_rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/project_card_rate_this_library"
+        android:text="@string/project_card_rate_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/project_card_project_licence" />

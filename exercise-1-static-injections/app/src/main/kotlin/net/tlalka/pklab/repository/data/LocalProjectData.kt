@@ -3,7 +3,7 @@ package net.tlalka.pklab.repository.data
 import net.tlalka.pklab.repository.model.Project
 
 /**
- * TODO: Add injector [ProjectDataInjector] to hide this implementation.
+ * TODO: Add injector [ProjectDataInjector] to return instance of [ProjectData]
  */
 internal class LocalProjectData : ProjectData {
 

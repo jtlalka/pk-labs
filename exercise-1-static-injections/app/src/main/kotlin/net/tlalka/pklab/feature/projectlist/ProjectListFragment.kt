@@ -17,9 +17,7 @@ class ProjectListFragment : Fragment(), ItemClickListener {
 
     private val projectsAdapter: ProjectsAdapter = ProjectsAdapter(this)
 
-    private val projectUseCase: GetProjectsUseCase by lazy {
-        GetProjectsUseCase()
-    }
+    private val projectUseCase: GetProjectsUseCase by lazy { GetProjectsUseCase() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
