@@ -1,9 +1,9 @@
 package net.tlalka.pklab.repository.data
 
 import net.tlalka.pklab.repository.model.Project
+import javax.inject.Inject
 
-//TODO: Add empty constructor with @Inject annotation or provide this object like [NetworkHeavyApi]
-internal class LocalProjectData : ProjectData {
+internal class LocalProjectData @Inject constructor() : ProjectData {
 
     override val projects: List<Project> = listOf(
         Project(
