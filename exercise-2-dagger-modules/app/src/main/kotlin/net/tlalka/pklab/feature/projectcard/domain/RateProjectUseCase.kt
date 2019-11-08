@@ -1,12 +1,10 @@
 package net.tlalka.pklab.feature.projectcard.domain
 
 import net.tlalka.pklab.network.NetworkHeavyApi
+import net.tlalka.pklab.network.NetworkHeavyApiInjector
 
-/**
- * TODO: Add default parameter value to constructor. [NetworkHeavyApiInjector.network]
- */
 class RateProjectUseCase(
-    private val networkApi: NetworkHeavyApi
+    private val networkApi: NetworkHeavyApi = NetworkHeavyApiInjector.network
 ) {
 
     fun rateProject(id: Int) =

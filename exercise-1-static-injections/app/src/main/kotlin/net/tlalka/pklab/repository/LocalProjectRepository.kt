@@ -4,7 +4,7 @@ import net.tlalka.pklab.repository.data.LocalProjectData
 import net.tlalka.pklab.repository.model.Project
 
 /**
- * TODO: Create injector [ProjectRepositoryInjector] to return always the same instance of [ProjectRepository] interface.
+ * TODO: Create injector [ProjectRepositoryInjector] to return instance of [ProjectRepository] interface.
  */
 internal class LocalProjectRepository : ProjectRepository {
 

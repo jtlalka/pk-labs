@@ -2,6 +2,9 @@ package net.tlalka.pklab.repository.data
 
 import net.tlalka.pklab.repository.model.Project
 
+/**
+ * TODO: Add injector [ProjectDataInjector] to hide this implementation.
+ */
 internal class LocalProjectData : ProjectData {
 
     override val projects: List<Project> = listOf(

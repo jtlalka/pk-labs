@@ -4,7 +4,7 @@ import net.tlalka.pklab.repository.ProjectRepository
 import net.tlalka.pklab.repository.model.Project
 
 /**
- * TODO: Add default parameter value to constructor. [ProjectRepositoryInjector.repository]
+ * TODO: Add default parameter value to constructor, Use [ProjectRepositoryInjector]
  */
 class GetProjectByIdUseCase(
     private val projectRepository: ProjectRepository

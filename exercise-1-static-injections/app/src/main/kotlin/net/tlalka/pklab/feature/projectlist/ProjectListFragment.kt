@@ -11,12 +11,15 @@ import net.tlalka.pklab.R
 import net.tlalka.pklab.feature.projectlist.domain.GetProjectsUseCase
 import net.tlalka.pklab.feature.projectlist.view.adapter.ProjectsAdapter
 import net.tlalka.pklab.feature.projectlist.view.listener.ItemClickListener
-import net.tlalka.pklab.repository.model.Project
 import kotlinx.android.synthetic.main.project_list_fragment.project_list_recycler as projectListRecycler
 
 class ProjectListFragment : Fragment(), ItemClickListener {
 
     private val projectsAdapter: ProjectsAdapter = ProjectsAdapter(this)
+
+    private val projectUseCase: GetProjectsUseCase by lazy {
+        GetProjectsUseCase()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,9 +38,7 @@ class ProjectListFragment : Fragment(), ItemClickListener {
     }
 
     private fun initProjectList() {
-        val projects: List<Project> = GetProjectsUseCase().findProjects()
-
-        projectsAdapter.submitList(projects)
+        projectsAdapter.submitList(projectUseCase.findProjects())
     }
 
     override fun onItemClickListener(id: Int) {

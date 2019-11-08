@@ -9,6 +9,7 @@ class NetworkHeavyApi {
 
     private var intArray: IntArray = IntArray(1000001)
 
+    // some heavy initialization
     init {
         for (i in 0..1000000) {
             intArray[i] = i
