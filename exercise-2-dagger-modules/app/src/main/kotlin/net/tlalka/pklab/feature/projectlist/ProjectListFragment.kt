@@ -8,15 +8,24 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import net.tlalka.pklab.R
+import net.tlalka.pklab.feature.di.featureComponent
 import net.tlalka.pklab.feature.projectlist.domain.GetProjectsUseCase
 import net.tlalka.pklab.feature.projectlist.view.adapter.ProjectsAdapter
 import net.tlalka.pklab.feature.projectlist.view.listener.ItemClickListener
-import net.tlalka.pklab.repository.model.Project
+import javax.inject.Inject
 import kotlinx.android.synthetic.main.project_list_fragment.project_list_recycler as projectListRecycler
 
 class ProjectListFragment : Fragment(), ItemClickListener {
 
+    @Inject
+    lateinit var getProjectsUseCase: GetProjectsUseCase
+
     private val projectsAdapter: ProjectsAdapter = ProjectsAdapter(this)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        featureComponent.inject(this)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,9 +44,7 @@ class ProjectListFragment : Fragment(), ItemClickListener {
     }
 
     private fun initProjectList() {
-        val projects: List<Project> = GetProjectsUseCase().findProjects()
-
-        projectsAdapter.submitList(projects)
+        projectsAdapter.submitList(getProjectsUseCase.findProjects())
     }
 
     override fun onItemClickListener(id: Int) {

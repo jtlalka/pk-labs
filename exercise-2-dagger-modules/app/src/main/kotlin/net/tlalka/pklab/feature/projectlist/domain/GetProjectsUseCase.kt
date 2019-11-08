@@ -1,14 +1,12 @@
 package net.tlalka.pklab.feature.projectlist.domain
 
-import net.tlalka.pklab.repository.ProjectRepository
 import net.tlalka.pklab.repository.ProjectRepositoryInjector
 import net.tlalka.pklab.repository.model.Project
+import javax.inject.Inject
 
-class GetProjectsUseCase(
-    private val projectRepository: ProjectRepository = ProjectRepositoryInjector.projectRepository
-) {
+class GetProjectsUseCase @Inject constructor() {
 
-    fun findProjects(): List<Project> {
-        return projectRepository.getAllProjects()
-    }
+    //TODO: Inject [ProjectRepository] using Dagger constructor injection with @Inject annotation.
+    fun findProjects(): List<Project> =
+        ProjectRepositoryInjector.projectRepository.getAllProjects()
 }

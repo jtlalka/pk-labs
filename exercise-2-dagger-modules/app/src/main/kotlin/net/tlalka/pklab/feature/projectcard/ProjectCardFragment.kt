@@ -18,12 +18,19 @@ class ProjectCardFragment : Fragment() {
 
     private val args: ProjectCardFragmentArgs by navArgs()
 
+    //TODO: Use Dagger @Inject annotation to inject this useCase via property injections
     private val projectUseCase: GetProjectByIdUseCase by lazy {
         GetProjectByIdUseCase()
     }
 
+    //TODO: Use Dagger @Inject annotation to inject this useCase via property injections
     private val rateProjectUseCase: RateProjectUseCase by lazy {
         RateProjectUseCase()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //TODO: Inject Dagger to this class, similarly like in [ProjectListFragment]
     }
 
     override fun onCreateView(

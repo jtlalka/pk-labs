@@ -18,6 +18,7 @@ object Config {
     const val androidLifecycleVersion = "2.2.0-beta01"
     const val androidNavigationVersion = "2.2.0-rc02"
     const val androidMaterialVersion = "1.1.0-beta01"
+    const val daggerVersion = "2.24"
 
     const val junitVersion = "4.12"
     const val junitExtVersion = "1.1.1"
@@ -47,6 +48,9 @@ object Config {
         const val androidNavigationUi = "androidx.navigation:navigation-ui-ktx:$androidNavigationVersion"
         const val androidNavigationFragment = "androidx.navigation:navigation-fragment-ktx:$androidNavigationVersion"
         const val androidMaterialDesign = "com.google.android.material:material:$androidMaterialVersion"
+
+        const val dagger = "com.google.dagger:dagger:$daggerVersion"
+        const val daggerComliler = "com.google.dagger:dagger-compiler:$daggerVersion"
 
         const val junit = "junit:junit:$junitVersion"
         const val junitExt = "androidx.test.ext:junit:$junitExtVersion"

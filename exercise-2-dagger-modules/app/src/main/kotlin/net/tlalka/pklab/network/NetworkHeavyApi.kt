@@ -2,6 +2,7 @@ package net.tlalka.pklab.network
 
 import android.util.Log
 
+//let's assume that we are not able to annotate this class with @Inject annotation.
 class NetworkHeavyApi {
 
     private var intArray: IntArray = IntArray(1000001)
