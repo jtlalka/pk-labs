@@ -2,9 +2,7 @@ package net.tlalka.pklab.repository.data
 
 import net.tlalka.pklab.repository.model.Project
 
-/**
- * TODO: Add injector [ProjectDataInjector] to return instance of [ProjectData]
- */
+// TODO: Add injector [ProjectDataInjector] to return instance of [ProjectData]
 internal class LocalProjectData : ProjectData {
 
     override val projects: List<Project> = listOf(
@@ -28,7 +26,7 @@ internal class LocalProjectData : ProjectData {
         ),
         Project(
             id = 3,
-            name = "Kodein",
+            name = "Coil",
             licence = "Apache-2.0",
             size = 24
         ),

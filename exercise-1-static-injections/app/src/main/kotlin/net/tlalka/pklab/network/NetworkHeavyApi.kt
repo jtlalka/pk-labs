@@ -2,9 +2,7 @@ package net.tlalka.pklab.network
 
 import android.util.Log
 
-/**
- * TODO: Create singleton injector [NetworkHeavyApiInjector] which will be lazy initialized.
- */
+// TODO: Create singleton injector [NetworkHeavyApiInjector] which will be lazy initialized.
 class NetworkHeavyApi {
 
     private var intArray: IntArray = IntArray(1000001)

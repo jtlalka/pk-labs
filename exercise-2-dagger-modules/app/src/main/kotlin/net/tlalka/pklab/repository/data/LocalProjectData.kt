@@ -26,7 +26,7 @@ internal class LocalProjectData : ProjectData {
         ),
         Project(
             id = 3,
-            name = "Kodein",
+            name = "Coil",
             licence = "Apache-2.0",
             size = 24
         ),

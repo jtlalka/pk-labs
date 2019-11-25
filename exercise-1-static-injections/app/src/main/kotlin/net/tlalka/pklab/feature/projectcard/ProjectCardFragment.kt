@@ -20,16 +20,12 @@ class ProjectCardFragment : Fragment() {
 
     private val args: ProjectCardFragmentArgs by navArgs()
 
-    /**
-     * TODO: Remove [LocalProjectRepository] from constructor when it will be possible.
-     */
+    // TODO: Remove [LocalProjectRepository] from constructor when it will be possible.
     private val projectUseCase: GetProjectByIdUseCase by lazy {
         GetProjectByIdUseCase(LocalProjectRepository())
     }
 
-    /**
-     * TODO: Remove [NetworkHeavyApi] from constructor when it will be possible.
-     */
+    // TODO: Remove [NetworkHeavyApi] from constructor when it will be possible.
     private val rateProjectUseCase: RateProjectUseCase by lazy {
         RateProjectUseCase(NetworkHeavyApi())
     }
